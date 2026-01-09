@@ -100,13 +100,43 @@ Videoda:
 -hedef ve istatistik hesaplama
 yer almaktadır.
 
+7. Kurulum & Çalıştırma
+
+Projeyi klonladıktan sonra:
+flutter pub get
+Ardından çalıştırmak için:
+flutter run
 
 
-7. --Öğrenci Bilgisi--
+Firebase configs firebase_options.dart dosyasında bulunmaktadır.
+Android için ek kurulum gerekirse:
+flutter pub run build_runner build
+
+8. Proje Klasör Yapısı
+lib/
+  screens/
+  services/
+  firebase_options.dart
+android/
+ios/
+pubspec.yaml
+README.md
+
+
+build/, .dart_tool/, Pods/ gibi klasörler projeye dahil edilmemiştir.
+
+9. Geliştirici Notu
+
+Bu proje tek geliştirici tarafından gerçekleştirilmiştir.
+Mobil programlama dersi kapsamında Flutter + Firebase entegrasyonu uygulamalı olarak öğrenilmiştir.
+Zamanlayıcı, istatistik hesaplama, topluluk akışı ve kullanıcı hedefleri gibi senaryolar gerçeğe yakın şekilde modellenmiştir.
+
+10. --Öğrenci Bilgisi--
 
 Ad Soyad: Batuhan Gözüyukarı
 Ögrenci No 23060515
 Ders: Mobil Programlama
 Dönem: 2025 - Dönem Sonu Projesi
+
 
 

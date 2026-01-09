@@ -6,6 +6,8 @@ Uygulama ayrıca motivasyon amaçlı topluluk etkileşimi sağlar (paylaşım, y
 
 Bu proje Mobil Programlama Final Ödevi kapsamında geliştirilmiştir.
 
+
+
 2. Proje Senaryosu
 
 Final dönemine hazırlanan bir öğrencinin hangi derse ne kadar çalıştığını bilmediği için verimsiz hissetmesi üzerine senaryo kurulmuştur.
@@ -14,6 +16,8 @@ Final dönemine hazırlanan bir öğrencinin hangi derse ne kadar çalıştığ�
 Son 7 güne ait istatistiklere bakabilir ve topluluk ekranında motivasyon amaçlı paylaşım yapabilir.
 
 Bu senaryo gerçek hayattaki öğrenci kullanımına yönelik tasarlanmıştır.
+
+
 
 3. Kullanılan Teknolojiler
 
@@ -35,6 +39,8 @@ StreamBuilder ile gerçek zamanlı veri işleme
 Stateful yaklaşım (setState)
 
 Firestore sorguları (orderBy, where, filter, map)
+
+
 
 
 4. Firestore Veri Modeli
@@ -69,6 +75,8 @@ posts {
 }
 Bu tasarım sayesinde: çalışma oturumlarıkullanıcılartopluluk paylaşımlarıhem ayrık hem de ilişkilendirilebilir şekilde tutulmaktadır.
 
+
+
 5. Uygulama Ekranları
 
 Giriş/Kayıt → Authentication + Şifre sıfırlama
@@ -77,6 +85,8 @@ Timer → Zamanlayıcı ile oturum kaydetme
 İstatistikler → Son 7 gün + ders bazlı analiz
 Topluluk (Community) → Paylaşım, yorum, beğeni
 Profil → Kullanıcı bilgisi ve profil fotoğrafı güncelleme
+
+
 
 6. Video Tanıtım (Final)
 
@@ -91,10 +101,12 @@ Videoda:
 yer almaktadır.
 
 
+
 7. --Öğrenci Bilgisi--
 
 Ad Soyad: Batuhan Gözüyukarı
 Ögrenci No 23060515
 Ders: Mobil Programlama
 Dönem: 2025 - Dönem Sonu Projesi
+
 

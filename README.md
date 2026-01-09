@@ -1,16 +1,100 @@
-# flutter_application_batuhangozuyukari
+ StudyTrack – Firebase Tabanlı Çalışma Süresi Takip & Motivasyon Uygulaması
+1. Projenin Amacı
 
-A new Flutter project.
+StudyTrack, öğrencilerin günlük ve haftalık çalışma sürelerini takip etmelerini, ders bazlı çalışmalarını kaydetmelerini ve performanslarını anlamalarına yardımcı olmayı amaçlayan Flutter tabanlı bir mobil uygulamadır.
+Uygulama ayrıca motivasyon amaçlı topluluk etkileşimi sağlar (paylaşım, yorum, beğeni).
 
-## Getting Started
+Bu proje Mobil Programlama Final Ödevi kapsamında geliştirilmiştir.
 
-This project is a starting point for a Flutter application.
+2. Proje Senaryosu
 
-A few resources to get you started if this is your first Flutter project:
+Final dönemine hazırlanan bir öğrencinin hangi derse ne kadar çalıştığını bilmediği için verimsiz hissetmesi üzerine senaryo kurulmuştur.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Öğrenci uygulamaya giriş yapar, günlük hedef belirler, zamanlayıcıyla çalışma oturumu başlatır ve bitirdiği oturumları kaydeder.
+Son 7 güne ait istatistiklere bakabilir ve topluluk ekranında motivasyon amaçlı paylaşım yapabilir.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Bu senaryo gerçek hayattaki öğrenci kullanımına yönelik tasarlanmıştır.
+
+3. Kullanılan Teknolojiler
+
+Frontend:
+Flutter
+Dart
+
+Backend & Bulut Servisleri (Firebase):
+
+Firebase Authentication
+Cloud Firestore
+Firebase Storage (Profil fotoğrafı ve aktiviteler için)
+Firebase Core
+
+Diğer:
+
+StreamBuilder ile gerçek zamanlı veri işleme
+
+Stateful yaklaşım (setState)
+
+Firestore sorguları (orderBy, where, filter, map)
+
+
+4. Firestore Veri Modeli
+
+Projede aşağıdaki koleksiyonlar kullanılmıştır:
+
+users {
+    uid: string,
+    name: string,
+    email: string,
+    weeklyGoalMinutes: number,
+    dailyGoalMinutes: number,
+    profilePic: string,
+}
+study_sessions {
+    userId: string,
+    lesson: string,
+    durationMinutes: number,
+    date: Timestamp,
+}
+posts {
+    userId: string,
+    userName: string,
+    userAvatar: string,
+    message: string,
+    date: Timestamp,
+    activityImage: string?,
+    activityLabel: string?,
+    likes: number,
+    likedBy: array<string>,
+    comments: array<object>,
+}
+Bu tasarım sayesinde: çalışma oturumlarıkullanıcılartopluluk paylaşımlarıhem ayrık hem de ilişkilendirilebilir şekilde tutulmaktadır.
+
+5. Uygulama Ekranları
+
+Giriş/Kayıt → Authentication + Şifre sıfırlama
+Dashboard → Günlük hedef ve çalışma süresi
+Timer → Zamanlayıcı ile oturum kaydetme
+İstatistikler → Son 7 gün + ders bazlı analiz
+Topluluk (Community) → Paylaşım, yorum, beğeni
+Profil → Kullanıcı bilgisi ve profil fotoğrafı güncelleme
+
+6. Video Tanıtım (Final)
+
+Uygulamanın çalışır halinin tanıtım videosu:
+ https://www.youtube.com/watch?v=FHy7RldUs2Q
+
+Videoda:
+-istenirlerin gösterimi
+-ekranlar arası geçiş
+-firebase operasyonları
+-hedef ve istatistik hesaplama
+yer almaktadır.
+
+
+7. --Öğrenci Bilgisi--
+
+Ad Soyad: Batuhan Gözüyukarı
+Ögrenci No 23060515
+Ders: Mobil Programlama
+Dönem: 2025 - Dönem Sonu Projesi
+
